@@ -208,43 +208,50 @@
                 <div class="box m-5">
                     <div id="results-carousel" class="carousel results-carousel">  
                     
-                      <div class="content has-text-justified" style="text-align: left;">
-                        <p>
-                            <strong>Transient Adaptation Gap.</strong> 
-                            This phenomenon refers to the temporary performance drop observed during the initial phase of training process with Reason-RFT-Zero. 
-                            As the model transitions from directly outputting answers to generating structured reasoning processes, 
-                            it experiences a brief adaptation difficulty, leading to a sharp performance decline followed by gradual recovery. As shown in (a), 
-                            which illustrates the training process of Reason-RFT-Zero on the CLEVR-MATH, both ID and OOD test performances exhibit this sharp drop and recovery within the first 100 steps (highlighted in the zoomed-in section). 
-                            We further investigate this phenomenon through a case study, as depicted in (b).
-                        </p>
-                        <img src="images/phon_1.png" alt="" width="70%"/>
-                        <p style="margin-bottom: 30px;">Transient Adaptation Gap.</p>
-                      </div>
-    
-                      <div class="content has-text-justified" style="text-align: left;">
-                        <p>
-                            <strong>Greedy Reward Stratification.</strong> 
-                            This phenomenon describes the model's tendency during Reason-RFT-Zero training to prioritize easier rewards (e.g., Format Reward) over harder ones (e.g., Accuracy Reward). 
-                            As shown in Figure, the model's Reasoning Token Length initially decreases, then gradually increases before stabilizing. This behavior coincides with the Format Reward reaching its initial peak and the Accuracy Reward entering its rapid growth phase. 
-                            We infer that the model simplifies its outputs early on to quickly adapt to the structured response format, reducing Reasoning Token Length. 
-                            Once the Format Reward is maximized, the model shifts focus to improving accuracy, increasing Reasoning Token Length.
-                        </p>
-                        <img src="images/phon_2.png" alt="" width="70%"/>
-                        <p style="margin-bottom: 30px;">Greedy Reward Stratification.</p>
-                      </div>
+                        <div class="content has-text-justified" style="text-align: left;">
+                            <p>
+                                <strong>Transient Adaptation Gap.</strong> 
+                                This phenomenon refers to the temporary performance drop observed during the initial phase of training process with Reason-RFT-Zero. 
+                                As the model transitions from directly outputting answers to generating structured reasoning processes, 
+                                it experiences a brief adaptation difficulty, leading to a sharp performance decline followed by gradual recovery. As shown in (a), 
+                                which illustrates the training process of Reason-RFT-Zero on the CLEVR-MATH, both ID and OOD test performances exhibit this sharp drop and recovery within the first 100 steps (highlighted in the zoomed-in section). 
+                                We further investigate this phenomenon through a case study, as depicted in (b).
+                            </p>
+                        </div>
 
-                      <div class="content has-text-justified" style="text-align: left;">
-                        <p>
-                            <strong>Reasoning Redundancy.</strong>
-                            This phenomenon refers to the significant difference in Reasoning Token Length between models trained under different paradigms. 
-                            For example, in the Structure Perception task, Reason-RFT and Reason-RFT-Zero achieve comparable final test accuracy, but Reason-RFT exhibits notably longer Reasoning Token Length, as shown in Figure. 
-                            This occurs because the CoT data used in Reason-RFT's Reasoning Activation phase, often distilled from stronger models (e.g., GPT-4o), leads the model to learn longer reasoning chains during CoT-SFT. 
-                            During the Reasoning Reinforcement phase, the model retains these lengthy chains due to the lack of penalties or incentives for response length. In contrast, Reason-RFT-Zero, which lacks CoT data, stabilizes at a shorter Reasoning Token Length through exploration. 
-                            We hypothesize that Reason-RFT's longer reasoning chains may be unnecessary for the current task difficulty, introducing redundant computational overhead. 
-                            Experiments limiting Reasoning Token Length during inference for Reason-RFT-trained models show stable performance until a certain threshold, partially confirming Reasoning Redundancy in specific tasks.
-                        </p>
-                        <img src="images/phon_3.png" alt="" width="70%"/>
-                        <p style="margin-bottom: 30px;">Reasoning Redundancy.</p>
+                        <div class="content has-text-centered">
+                            <img src="images/phon_1.png" alt="" width="70%"/>
+                            <p style="margin-bottom: 30px;">Transient Adaptation Gap.</p>
+                        </div>
+    
+                        <div class="content has-text-justified" style="text-align: left;">
+                            <p>
+                                <strong>Greedy Reward Stratification.</strong> 
+                                This phenomenon describes the model's tendency during Reason-RFT-Zero training to prioritize easier rewards (e.g., Format Reward) over harder ones (e.g., Accuracy Reward). 
+                                As shown in Figure, the model's Reasoning Token Length initially decreases, then gradually increases before stabilizing. This behavior coincides with the Format Reward reaching its initial peak and the Accuracy Reward entering its rapid growth phase. 
+                                We infer that the model simplifies its outputs early on to quickly adapt to the structured response format, reducing Reasoning Token Length. 
+                                Once the Format Reward is maximized, the model shifts focus to improving accuracy, increasing Reasoning Token Length.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="images/phon_2.png" alt="" width="70%"/>
+                            <p style="margin-bottom: 30px;">Greedy Reward Stratification.</p>
+                        </div>
+
+                        <div class="content has-text-justified" style="text-align: left;">
+                            <p>
+                                <strong>Reasoning Redundancy.</strong>
+                                This phenomenon refers to the significant difference in Reasoning Token Length between models trained under different paradigms. 
+                                For example, in the Structure Perception task, Reason-RFT and Reason-RFT-Zero achieve comparable final test accuracy, but Reason-RFT exhibits notably longer Reasoning Token Length, as shown in Figure. 
+                                This occurs because the CoT data used in Reason-RFT's Reasoning Activation phase, often distilled from stronger models (e.g., GPT-4o), leads the model to learn longer reasoning chains during CoT-SFT. 
+                                During the Reasoning Reinforcement phase, the model retains these lengthy chains due to the lack of penalties or incentives for response length. In contrast, Reason-RFT-Zero, which lacks CoT data, stabilizes at a shorter Reasoning Token Length through exploration. 
+                                We hypothesize that Reason-RFT's longer reasoning chains may be unnecessary for the current task difficulty, introducing redundant computational overhead. 
+                                Experiments limiting Reasoning Token Length during inference for Reason-RFT-trained models show stable performance until a certain threshold, partially confirming Reasoning Redundancy in specific tasks.
+                            </p>
+                        </div>
+                        <div class="content has-text-centered">
+                            <img src="images/phon_3.png" alt="" width="70%"/>
+                            <p style="margin-bottom: 30px;">Reasoning Redundancy.</p>
                       </div>
                     </div>
                 </div>
