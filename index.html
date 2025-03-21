@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>RoboBrain</title>
+    <meta name="description" content="Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+
+
+<body onload="SubmissionVidep();">
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete
+                        </h1>
+                        <h3 class="title is-4 conference-authors">
+                            <a target="_blank" href="https://robot-colosseum.github.io/">
+                                CVPR 2025
+                            </a>
+                        </h3>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a target="_blank" href="">Huajie Tan</a><sup>1,2,*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="">Yuheng Ji</a><sup>2,3,4,*</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="">Xiaoshuai Hao</a><sup>2,*,&dagger;</sup>
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="">Minglan Lin</a><sup>2</sup>
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank" href="">Pengwei Wang</a><sup>2,&dagger;</sup>
+                            </span>
+                            <span class="author-block">
+                                <a target="_blank">Shanghang Zhang</a><sup>1,2,&nbsp;<span style="font-family: serif;">✉</span></sup>
+                            </span>
+                        </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block" style="font-size: 0.9em;"><sup>1</sup>State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University</span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>2</sup>Beijing Academy of Artificial Intelligence</span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>3</sup>Institute of Automation, Chinese Academy of Sciences</span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>4</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences</span>
+                            <span class="author-block" style="font-size: 0.9em;"><sup>*</sup>Equal contribution <sup>&dagger;</sup>Project leaders <sup>&nbsp;<span style="font-family: serif;">✉</span></sup>Corresponding author</span>
+                        </div>
+                        <div class="column has-text-centered">
+                            <!-- ArXiv link -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://tanhuajie.github.io/ReasonRFT" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-file"></i></span>
+                                    <span>ArXiv</span>
+                                </a>
+                            </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://tanhuajie.github.io/ReasonRFT" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fab fa-github"></i></span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                            <!-- Dataset Link. -->
+                            <span class="link-block">
+                                <a target="_blank" href="https://tanhuajie.github.io/ReasonRFT" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-database"></i></span>
+                                    <span>Dataset</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                            <a target="_blank" href="https://tanhuajie.github.io/ReasonRFT" class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon"><i class="fas fa-check"></i></span>
+                                <span>Checkpoints</span>
+                            </a>
+                        </span>
+                            <span class="link-block">
+                                <a target="_blank" href="https://tanhuajie.github.io/ReasonRFT" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon"><i class="fas fa-laptop"></i></span>
+                                    <span>Demo</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaser and Abstract -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <figure>
+                    <img src="images/teaser.png" alt="teaser" width="70%">
+                    <figcaption><strong>Overview of Reason-RFT.</strong> Compared to traditional SFT-based methods, 
+                        our proposed Reason-RFT framework demonstrates superior generalization in visual reasoning tasks, 
+                        excelling in reasoning improvement, out-of-domain performance, and data efficiency.
+                    </figcaption>
+                </figure>
+              </div>
+            <!-- Abstract -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Visual reasoning abilities play a crucial role in understanding complex multimodal data, advancing both domain-specific applications and artificial general intelligence (AGI).
+                            Existing methods improve VLM reasoning via Chain-of-Thought (CoT) supervised fine-tuning, using meticulously annotated training data to enhance visual reasoning capabilities.
+                            However, this training paradigm may lead to overfitting and cognitive rigidity, restricting the model's ability to transfer visual reasoning skills across domains and limiting its real-world applicability.
+                            To address these limitations, we propose <strong>Reason-RFT</strong>, a novel reinforcement fine-tuning framework that significantly enhances generalization capabilities in visual reasoning tasks.
+                            <strong>Reason-RFT</strong> introduces a two-phase training framework for visual reasoning: (1) Supervised Fine-Tuning (SFT) with curated Chain-of-Thought (CoT) data activates the reasoning potential of Vision-Language Models (VLMs), followed by (2) Group Relative Policy Optimization (GRPO)-based reinforcement learning that generates multiple reasoning-response pairs, significantly enhancing generalization in visual reasoning tasks.
+                            To evaluate <strong>Reason-RFT</strong>'s visual reasoning capabilities, we reconstructed a comprehensive dataset spanning visual counting, structure perception, and spatial transformation, serving as a benchmark to systematically assess visual cognition, geometric understanding, and spatial generalization.
+                            Experimental results demonstrate Reasoning-RFT's three key advantages: <strong>(1) Performance Enhancement:</strong> achieving state-of-the-art results across multiple tasks, outperforming both open-source and proprietary models; 
+                            <strong>(2) Generalization Superiority:</strong> consistently maintaining robust performance across diverse tasks and domains, outperforming alternative training paradigms.
+                            <strong>(3) Data Efficiency:</strong> excelling in few-shot learning scenarios while surpassing full-dataset SFT baselines; 
+                            <strong>Reason-RFT</strong> introduces a novel paradigm in visual reasoning, significantly advancing multimodal research.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Abstract -->
+        </div>
+    </section>
+
+
+
+
+    <div class="columns is-centered">
+        <div class="container">
+          <div class="content has-text-centered">
+            <h2 class="title is-3">RoboBrain Overview</h2>
+  
+            <div class="box m-5" >
+              <div class="content has-text-centered">
+                <figure>
+                    <img src="images/pipeline.png" alt="teaser" width="70%">
+                    <figcaption><strong>Framework of Reason-RFT.</strong> 
+                        (a) Reason-RFT introduces a two-phase training framework for visual reasoning. 
+                        First, Supervised Fine-Tuning (SFT) with Chain-of-Thought (CoT) reasoning activates the model's domain-specific reasoning capabilities using a high-quality visual reasoning dataset in stage 1. 
+                        Subsequently, in stage 2, Group Relative Policy Optimization (GRPO) enhances reasoning capabilities, enabling Reason-RFT to achieve superior generalization by pushing the model's reasoning limits. 
+                        (b) Reward evaluation consists of format reward and three different types of accuracy reward.
+                    </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- <section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows is-centered">
+
+            <h2 class="title is-3 has-text-centered">RoboBrain Model</h2>
+
+            <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/pipeline.jpg" alt="pipeline" width="70%">
+                        <figcaption><strong>The pipeline of our RoboBrain.</strong>
+                            The images and videos are sent into our model to pre-train a foundation robotic brain. 
+                            Besides, we fine-tune the RoboBrain via A-LoRA and T-LoRA to develop affordance perception and trajectory prediction skills. 
+                            In practical applications, the model first generates detailed plans, and then splits it into sub-task descriptions to execute specific robotic tasks. </figcaption>
+                    </figure>
+                </div>
+              </div>
+
+              <div class="box m-5" >
+                <div class="content has-text-centered">
+
+                    <figure class="has-text-centered">
+                        <img src="images/train.jpg" alt="train"  width="90%">
+                        <figcaption>Detailed configuration for each training stage of the RoboBrain.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+              <section class="section" style="margin-top: -50px;"></section>
+              <div class="container is-max-desktop">
+                <div class="columns is-centered" style="display: flex; align-items: center;"> -->
+                  <!-- Left Column for the Image -->
+                  <!-- <div class="column is-half" style="text-align: center;">
+                    <img src="images/training_data.jpg" style="max-width: 100%; height: auto;" width="80%" />
+                  </div> -->
+                  <!-- Right Column for the Text -->
+                  <!-- <div class="column is-half">
+                    <div class="content has-text-justified" style="padding-left: 15px;">
+                      <h2 class="title is-3">
+                        Data Distribution
+                      </h2>
+                      <p>
+                        In our multi-stage training strategy, the proportional distribution and compositional structure of the training data are pivotal to the performance of RoboBrain. 
+                        The left-hand figure provides a visualization of the training data.
+                      </p>
+                    </div>
+                  </div>
+                </div><hr>
+              </div>
+            </section>
+          
+          
+            <br/>
+
+        </div>
+    </div> -->
+
+
+
+
+
+
+<!-- <section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows is-centered">
+            <h2 class="title is-3 has-text-centered">Evaluation Results</h2>
+
+            <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure>
+                        <img src="images/robotic_benchmark.jpg" alt="visualization" width="80%">
+                        <figcaption>RoboBrain consistently outperforms all baseline models across three robotic task planning benchmarks, 
+                            demonstrating its robust capability in handling complex, long-horizon manipulation task scenarios.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+              <div class="box m-5">
+            
+                <div id="results-carousel" class="carousel results-carousel">  
+                
+                  <div class="content has-text-centered">
+                    <img src="images/openeqa.png" alt="" width="30%"/>
+                    <p style="margin-bottom: 30px;">Experiment results on OpenEQA. </p>
+                  </div>
+                
+                  <div class="content has-text-centered">
+                    <img src="images/sharedrobot.png" alt="" width="30%"/>
+                    <p style="margin-bottom: 30px;">Experiment results on ShareRobot.</p>
+                  </div>
+      
+                  <div class="content has-text-centered">
+                    <img src="images/robovqabenchmark.png" alt="" width="35%"/>
+                    <p style="margin-bottom: 30px;">Experiment results on RoboVQA.</p>
+                  </div>
+      
+                </div>
+      
+              </div>
+
+              <div class="box m-5">
+            
+                <div id="results-carousel" class="carousel results-carousel">  
+                
+                  <div class="content has-text-centered">
+                    <img src="images/eval_traj.jpg" alt="" width="40%"/>
+                    <p style="margin-bottom: 30px;">Trajectory Prediction Results Comparison.</p>
+                  </div>
+                
+
+                  <div class="content has-text-centered">
+                    <img src="images/eval_afford.jpg" alt="" width="40%"/>
+                    <p style="margin-bottom: 30px;">The comparison of affordance prediction.</p>
+                  </div>
+                </div>
+              </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <h2 class="title is-3 has-text-centered">Visualization</h2>
+
+
+
+                <div class="box m-5" >
+                    <div class="content has-text-centered">
+                        <figure>
+                            <img src="images/visualization.jpg" alt="visualization" width="80%">
+                            <figcaption>This visualization illustrates that RoboBrain can interpret human instructions and visual images to generate action plans and
+                                assessments based on real-time image feedback. Furthermore, it predicts trajectories for each step and identifies corresponding affordances.</figcaption>
+                        </figure>
+                    </div>
+                  </div>
+    
+
+                  <div class="box m-5" >
+                    <div class="content has-text-centered">
+                        <figure>
+                            <img src="images/suppl_planning_demo_with_bad_case.png" alt="visualization" width="80%">
+                            <figcaption>
+                                Additional embodied planning of RoboBrain. Here, we present additional embodied planning for robotic tasks generated by RoboBrain. 
+                                In this figure, we demonstrate the planning results of RoboBrain for four distinct robotic manipulation tasks: "Water plants", 
+                                "Put the pot in the drawer", "Cluster blocks of the same color into different corners", and "Clean the desk", 
+                                where the first three are categorized as good cases. 
+                            </figcaption>
+                        </figure>
+                    </div>
+                  </div>
+
+
+                  <div class="box m-5" >
+                    <div class="content has-text-centered">
+                        <figure>
+                            <img src="images/visual_afford.jpg" alt="visualization" width="80%">
+                            <figcaption><strong>Additional visualizations of diverse affordance areas.</strong> 
+                                The text below each subfigure indicates the task instructions, 
+                                while the red bounding boxes represent the affordance areas predicted by the RoboBrain model. 
+                                The visualizations in the first three rows demonstrate that our RoboBrain model effectively identifies reasonable affordance areas based on human instructions and visual information. 
+                                The fourth row presents several failure cases, which may stem from the model's lack of ability to perceive and localize in noisy environments. 
+                                This limitation could be attributed to the absence of such scenarios in the training data used during Stage 4. 
+                                </figcaption>
+                        </figure>
+        
+                    </div>
+                  </div>
+
+
+                  <div class="box m-5" >
+                    <div class="content has-text-centered">
+
+                        <figure>
+                            <img src="images/visual_traj.jpg" alt="visualization" width="80%">
+                            <figcaption><strong>Additional visualizations of diverse 2D trajectories.</strong> 
+                                 The red-to-purple gradient curves represent the ground truth, while the green-to-blue gradient curves indicate the predicted trajectories. 
+                                 The visualizations in the first two rows demonstrate that our RoboBrain model effectively generates end-effector manipulation curves based on the robot's observations and task instructions. 
+                                 The third row shows that RoboBrain is not merely fitting trajectories but also exhibits the ability to generate more reasonable and feasible curves. 
+                                 </figcaption>
+                        </figure>
+        
+        
+                    </div>
+                  </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows is-centered">
+            <h2 class="title is-3 has-text-centered">ShareRobot</h2>
+
+
+            <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/sharerobot.jpg" alt="dataset">
+                        <figcaption><strong>The diversity of our ShareRobot dataset. </strong>Our dataset involves (a) 23 original datasets, (b) 12 embodiments and (c) 107 types 
+                            of atomic tasks. The distribution of the top 20 most frequent atomic actions within our ShareRobot dataset is presented in (c).</figcaption>
+                    </figure>
+    
+                </div>
+              </div>
+
+
+
+              <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/dataset_pipeline.jpg" alt="dataset_pipeline" width="80%">
+                        <figcaption><strong>The generation procession of our ShareRobot dataset. </strong>Our dataset labels multi-dimensional information, including task 
+                            planning, object affordance, and end-effector trajectories. The task planning is first annotated by atomic tasks and then augmented by 
+                            constructing question-answer pairs. The affordance and trajectory are labeled on the images according to the specific instructions.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+
+              <div class="box m-5" >
+                <div class="content has-text-centered">
+                    <figure class="has-text-centered">
+                        <img src="images/prompts.jpg" alt="dataset_prompts"  width="80%">
+                        <figcaption><strong>Additonal visualizations of prompts for Gemini. </strong>The prompts encapsulate the task description for robotic arm action 
+                            recognition, the components of the target, and the desired response format. Additionally, an example is included to assist Gemini in 
+                            understanding the specific task.</figcaption>
+                    </figure>
+                </div>
+              </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows is-centered">
+            <h2 class="title is-3 has-text-centered">RoboBrain in the real world</h2>
+            In the future, we will further optimize the capabilities of RoboBrain to enhance its generalization and robustness as an embodied brain model. 
+            We will apply it to a wider range of <strong>real-world</strong> scenarios, providing stronger support for the development of robotics technology. 
+            <strong>We will continue to update this page.</strong>
+        </div>
+    </div>
+</section> -->
+</body>
+</html>
