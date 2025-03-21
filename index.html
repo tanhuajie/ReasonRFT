@@ -101,12 +101,6 @@
         </div>
     </section>
 
-    <div class="columns is-centered">
-        <div class="container">
-          
-        </div>
-    </div>
-
     <!-- Teaser and Abstract -->
     <section class="section">
         <div class="container is-max-desktop">
@@ -162,266 +156,87 @@
             </div>
           </div>
         </div>
-      </div>
-
-
-    <!-- <section class="section">
-    <div class="container is-max-widescreen">
-        <div class="rows is-centered">
-
-            <h2 class="title is-3 has-text-centered">RoboBrain Model</h2>
-
-            <div class="box m-5" >
-                <div class="content has-text-centered">
-                    <figure class="has-text-centered">
-                        <img src="images/pipeline.jpg" alt="pipeline" width="70%">
-                        <figcaption><strong>The pipeline of our RoboBrain.</strong>
-                            The images and videos are sent into our model to pre-train a foundation robotic brain. 
-                            Besides, we fine-tune the RoboBrain via A-LoRA and T-LoRA to develop affordance perception and trajectory prediction skills. 
-                            In practical applications, the model first generates detailed plans, and then splits it into sub-task descriptions to execute specific robotic tasks. </figcaption>
-                    </figure>
-                </div>
-              </div>
-
-              <div class="box m-5" >
-                <div class="content has-text-centered">
-
-                    <figure class="has-text-centered">
-                        <img src="images/train.jpg" alt="train"  width="90%">
-                        <figcaption>Detailed configuration for each training stage of the RoboBrain.</figcaption>
-                    </figure>
-                </div>
-              </div>
-
-
-              <section class="section" style="margin-top: -50px;"></section>
-              <div class="container is-max-desktop">
-                <div class="columns is-centered" style="display: flex; align-items: center;"> -->
-                  <!-- Left Column for the Image -->
-                  <!-- <div class="column is-half" style="text-align: center;">
-                    <img src="images/training_data.jpg" style="max-width: 100%; height: auto;" width="80%" />
-                  </div> -->
-                  <!-- Right Column for the Text -->
-                  <!-- <div class="column is-half">
-                    <div class="content has-text-justified" style="padding-left: 15px;">
-                      <h2 class="title is-3">
-                        Data Distribution
-                      </h2>
-                      <p>
-                        In our multi-stage training strategy, the proportional distribution and compositional structure of the training data are pivotal to the performance of RoboBrain. 
-                        The left-hand figure provides a visualization of the training data.
-                      </p>
-                    </div>
-                  </div>
-                </div><hr>
-              </div>
-            </section>
-          
-          
-            <br/>
-
-        </div>
-    </div> -->
-
-
-
-
-
-
-<!-- <section class="section">
-    <div class="container is-max-widescreen">
-        <div class="rows is-centered">
-            <h2 class="title is-3 has-text-centered">Evaluation Results</h2>
-
-            <div class="box m-5" >
-                <div class="content has-text-centered">
-                    <figure>
-                        <img src="images/robotic_benchmark.jpg" alt="visualization" width="80%">
-                        <figcaption>RoboBrain consistently outperforms all baseline models across three robotic task planning benchmarks, 
-                            demonstrating its robust capability in handling complex, long-horizon manipulation task scenarios.</figcaption>
-                    </figure>
-                </div>
-              </div>
-
-
-              <div class="box m-5">
-            
-                <div id="results-carousel" class="carousel results-carousel">  
-                
-                  <div class="content has-text-centered">
-                    <img src="images/openeqa.png" alt="" width="30%"/>
-                    <p style="margin-bottom: 30px;">Experiment results on OpenEQA. </p>
-                  </div>
-                
-                  <div class="content has-text-centered">
-                    <img src="images/sharedrobot.png" alt="" width="30%"/>
-                    <p style="margin-bottom: 30px;">Experiment results on ShareRobot.</p>
-                  </div>
-      
-                  <div class="content has-text-centered">
-                    <img src="images/robovqabenchmark.png" alt="" width="35%"/>
-                    <p style="margin-bottom: 30px;">Experiment results on RoboVQA.</p>
-                  </div>
-      
-                </div>
-      
-              </div>
-
-              <div class="box m-5">
-            
-                <div id="results-carousel" class="carousel results-carousel">  
-                
-                  <div class="content has-text-centered">
-                    <img src="images/eval_traj.jpg" alt="" width="40%"/>
-                    <p style="margin-bottom: 30px;">Trajectory Prediction Results Comparison.</p>
-                  </div>
-                
-
-                  <div class="content has-text-centered">
-                    <img src="images/eval_afford.jpg" alt="" width="40%"/>
-                    <p style="margin-bottom: 30px;">The comparison of affordance prediction.</p>
-                  </div>
-                </div>
-              </div>
-
-
-        </div>
     </div>
-</section>
 
 
-<section class="section">
-    <div class="container is-max-widescreen">
-        <div class="rows">
-            <div class="rows is-centered ">
-                <h2 class="title is-3 has-text-centered">Visualization</h2>
-
-
-
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows is-centered">
+                <h2 class="title is-3 has-text-centered">Evaluation Results</h2>
+    
                 <div class="box m-5" >
                     <div class="content has-text-centered">
                         <figure>
-                            <img src="images/visualization.jpg" alt="visualization" width="80%">
-                            <figcaption>This visualization illustrates that RoboBrain can interpret human instructions and visual images to generate action plans and
-                                assessments based on real-time image feedback. Furthermore, it predicts trajectories for each step and identifies corresponding affordances.</figcaption>
-                        </figure>
-                    </div>
-                  </div>
-    
-
-                  <div class="box m-5" >
-                    <div class="content has-text-centered">
-                        <figure>
-                            <img src="images/suppl_planning_demo_with_bad_case.png" alt="visualization" width="80%">
-                            <figcaption>
-                                Additional embodied planning of RoboBrain. Here, we present additional embodied planning for robotic tasks generated by RoboBrain. 
-                                In this figure, we demonstrate the planning results of RoboBrain for four distinct robotic manipulation tasks: "Water plants", 
-                                "Put the pot in the drawer", "Cluster blocks of the same color into different corners", and "Clean the desk", 
-                                where the first three are categorized as good cases. 
+                            <img src="images/eval.png" alt="evaluation" width="80%">
+                            <figcaption>Results on three visual reasoning tasks. The best results among different training paradigms are highlighted in bold, while the
+                                second-best results are underlined. “ID” denotes in-domain test data, and “OOD” denotes out-of-domain test data.
                             </figcaption>
                         </figure>
                     </div>
-                  </div>
-
-
-                  <div class="box m-5" >
-                    <div class="content has-text-centered">
-                        <figure>
-                            <img src="images/visual_afford.jpg" alt="visualization" width="80%">
-                            <figcaption><strong>Additional visualizations of diverse affordance areas.</strong> 
-                                The text below each subfigure indicates the task instructions, 
-                                while the red bounding boxes represent the affordance areas predicted by the RoboBrain model. 
-                                The visualizations in the first three rows demonstrate that our RoboBrain model effectively identifies reasonable affordance areas based on human instructions and visual information. 
-                                The fourth row presents several failure cases, which may stem from the model's lack of ability to perceive and localize in noisy environments. 
-                                This limitation could be attributed to the absence of such scenarios in the training data used during Stage 4. 
-                                </figcaption>
-                        </figure>
-        
+                </div>
+    
+                <div class="box m-5">
+                    <div id="results-carousel" class="carousel results-carousel">  
+                    
+                      <div class="content has-text-centered">
+                        <img src="images/appx_res_2b.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Results Comparison for 2B model.</p>
+                      </div>
+    
+                      <div class="content has-text-centered">
+                        <img src="images/appx_res_7b.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Results Comparison for 7B model.</p>
+                      </div>
                     </div>
-                  </div>
-
-
-                  <div class="box m-5" >
-                    <div class="content has-text-centered">
-
-                        <figure>
-                            <img src="images/visual_traj.jpg" alt="visualization" width="80%">
-                            <figcaption><strong>Additional visualizations of diverse 2D trajectories.</strong> 
-                                 The red-to-purple gradient curves represent the ground truth, while the green-to-blue gradient curves indicate the predicted trajectories. 
-                                 The visualizations in the first two rows demonstrate that our RoboBrain model effectively generates end-effector manipulation curves based on the robot's observations and task instructions. 
-                                 The third row shows that RoboBrain is not merely fitting trajectories but also exhibits the ability to generate more reasonable and feasible curves. 
-                                 </figcaption>
-                        </figure>
-        
-        
-                    </div>
-                  </div>
-
-
+                </div>
+    
+    
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="container is-max-widescreen">
-        <div class="rows is-centered">
-            <h2 class="title is-3 has-text-centered">ShareRobot</h2>
-
-
-            <div class="box m-5" >
-                <div class="content has-text-centered">
-                    <figure class="has-text-centered">
-                        <img src="images/sharerobot.jpg" alt="dataset">
-                        <figcaption><strong>The diversity of our ShareRobot dataset. </strong>Our dataset involves (a) 23 original datasets, (b) 12 embodiments and (c) 107 types 
-                            of atomic tasks. The distribution of the top 20 most frequent atomic actions within our ShareRobot dataset is presented in (c).</figcaption>
-                    </figure>
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows is-centered">
+                <h2 class="title is-3 has-text-centered">Examples on Structure Perception Task</h2>
     
+                <div class="box m-5">
+                    <div id="results-carousel" class="carousel results-carousel">  
+                    
+                      <div class="content has-text-centered">
+                        <img src="images/case1.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Visualization example 1 on Structure Perception task.</p>
+                      </div>
+    
+                      <div class="content has-text-centered">
+                        <img src="images/case2.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Visualization example 2 on Structure Perception task.</p>
+                      </div>
+
+                      <div class="content has-text-centered">
+                        <img src="images/case3.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Visualization example 3 on Structure Perception task.</p>
+                      </div>
+
+                      <div class="content has-text-centered">
+                        <img src="images/case4.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Visualization example 4 on Structure Perception task.</p>
+                      </div>
+
+                      <div class="content has-text-centered">
+                        <img src="images/case5.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Visualization example 5 on Structure Perception task.</p>
+                      </div>
+
+                      <div class="content has-text-centered">
+                        <img src="images/case6.png" alt="" width="70%"/>
+                        <p style="margin-bottom: 30px;">Visualization example 6 on Structure Perception task.</p>
+                      </div>
+                    </div>
                 </div>
-              </div>
-
-
-
-              <div class="box m-5" >
-                <div class="content has-text-centered">
-                    <figure class="has-text-centered">
-                        <img src="images/dataset_pipeline.jpg" alt="dataset_pipeline" width="80%">
-                        <figcaption><strong>The generation procession of our ShareRobot dataset. </strong>Our dataset labels multi-dimensional information, including task 
-                            planning, object affordance, and end-effector trajectories. The task planning is first annotated by atomic tasks and then augmented by 
-                            constructing question-answer pairs. The affordance and trajectory are labeled on the images according to the specific instructions.</figcaption>
-                    </figure>
-                </div>
-              </div>
-
-
-
-              <div class="box m-5" >
-                <div class="content has-text-centered">
-                    <figure class="has-text-centered">
-                        <img src="images/prompts.jpg" alt="dataset_prompts"  width="80%">
-                        <figcaption><strong>Additonal visualizations of prompts for Gemini. </strong>The prompts encapsulate the task description for robotic arm action 
-                            recognition, the components of the target, and the desired response format. Additionally, an example is included to assist Gemini in 
-                            understanding the specific task.</figcaption>
-                    </figure>
-                </div>
-              </div>
-
-
-
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<section class="section">
-    <div class="container is-max-widescreen">
-        <div class="rows is-centered">
-            <h2 class="title is-3 has-text-centered">RoboBrain in the real world</h2>
-            In the future, we will further optimize the capabilities of RoboBrain to enhance its generalization and robustness as an embodied brain model. 
-            We will apply it to a wider range of <strong>real-world</strong> scenarios, providing stronger support for the development of robotics technology. 
-            <strong>We will continue to update this page.</strong>
-        </div>
-    </div>
-</section> -->
 </body>
 </html>
